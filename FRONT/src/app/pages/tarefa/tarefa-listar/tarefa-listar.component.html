@@ -1,0 +1,22 @@
+<!-- pessoa-listar.component.html -->
+<h1>Tarefas</h1>
+
+<div class="card-container">
+  <div *ngFor="let tarefa of tarefas" class="card">
+    <div class="card-header">
+      <h2>ID: {{ tarefa.tarefaId }}</h2>
+    </div>
+    <div class="card-body">
+      <p><strong>Titulo:</strong> {{ tarefa.titulo }}</p>
+      <p><strong>Descrição:</strong> {{ tarefa.descricao }}</p>
+      <p><strong>Criado Em:</strong> {{ tarefa.criadoEm }}</p>
+      <p><strong>Categoria:</strong> {{ tarefa.categoria }}</p>
+      <p><strong>Categoria ID:</strong> {{ tarefa.categoriaId }}</p>
+      <p>
+        <strong>Criado Em:</strong>
+        {{ tarefa.criadoEm | date : "dd/MM/yyyy HH:mm:ss" }}
+      </p>
+      <p><strong>Status:</strong> {{ tarefa.status }}</p>
+    </div>
+  </div>
+</div>
