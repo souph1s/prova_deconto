@@ -44,4 +44,8 @@ public class CategoriaController : ControllerBase
             return BadRequest(e.Message);
         }
     }
+
+    
+
+
 }

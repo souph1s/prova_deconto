@@ -8,8 +8,23 @@ POST {{base_url}}/cadastrar
 Content-Type: application/json
 
 {
-  "Titulo": "Compras no Supermercado",
+  "Titulo": "Testando campo status",
   "Descricao": "1. Fazer lista de compras: pão, leite, ovos, frutas, vegetais",
-  "CategoriaId": 4
+  "CategoriaId": 4,
+  "Status": "Não iniciada",
 }
+
+### Atualizar Tarefa ###
+PATCH {{base_url}}/atualizar/4
+Content-Type: application/json
+
+{
+    "Status": "Concluída"
+}
+
+### Listar tarefas concluídas ###
+GET {{base_url}}/listar/concluidas
+
+### Listar tarefas não concluídas ###
+GET {{base_url}}/listar/naoconcluidas
 
